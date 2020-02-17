@@ -15,11 +15,10 @@ rm -rf ${send_file}
 function send_TG(){
 list=$(echo -e "\n" && cat ${send_file}|while read line; do echo ${line}; done)
 sub=$(echo -e "以下域名將在${last_day}天後過期，注意域名過期會很麻煩!!")
-#公司TG
-#curl -X POST "https://api.telegram.org/bot802001485:AAEoiOpr4QHLkZQxg2hXAvkxRenHQyu8_WY/sendMessage" -d "chat_id=-398859134&text=${sub}_${name}_${nowday} ${list}"
+
 
 #我的TG
-curl -X POST "https://api.telegram.org/bot1052983262:AAFKP89Plnv7WWDjUObuH3Qb2OwTG_bCvbM/sendMessage" -d "chat_id=-309196620&text=${name}_${sub} ${list}"
+curl -X POST "https://api.telegram.org/bot號碼以及token/sendMessage" -d "chat_id=xxxx&text=${name}_${sub} ${list}"
 
 }
 
